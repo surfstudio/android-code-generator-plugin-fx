@@ -61,7 +61,6 @@ public class AdapterGenerator {
 		imports.add(typesAdapter.getType("ViewGroup"));
 		imports.add(typesAdapter.getType("Typeface"));
 		imports.add(typesAdapter.getType("ArrayAdapter"));
-		imports.add(Constants.getR(basePackage));
 	}
 	
 	public void setPackageName(String packageName) {
