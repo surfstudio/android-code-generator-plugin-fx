@@ -21,7 +21,7 @@ import ru.surfstudio.codegenerator.plugin.XmlLayoutParser.OnItemSelectedListener
 
 public class ItemListDialog extends Dialog {
 
-	private static final String TITLE_PATTERN = "Выберите файл для адаптера %s";
+	private static final String TITLE_PATTERN = "Choose a item layout for %s";
 
 	private List list;
 	private String activityName;
