@@ -34,7 +34,7 @@ public class AdapterGenerator {
 		+"\t\t}\n\n"
 		+"\t\tString item = getItem(position);\n"
 		+"\t\tif (item != null){\n"
-		+"\t\t\tholder.populateForm(item);"
+		+"\t\t\tholder.populateForm(item);\n"
 		+"\t\t}\n"
 		+"\t\treturn convertView;\n"
 		+"\t}\n";
