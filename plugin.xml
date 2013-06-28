@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command commandId="ru.surfstudio.codegenerator.plugin.convert"
+               label="Android Code Generator"
+               style="push">
+               <visibleWhen
+                  checkEnabled="false">
+		        	<with
+	                     variable="activeMenuSelection">
+	                  <iterate
+	                  	ifEmpty="true"
+                      	operator="and">
+	                     <adapt type="org.eclipse.core.resources.IFile">
+                            <test property="org.eclipse.core.resources.name"
+                 				value="*.xml"/>
+	                     </adapt>
+	                  </iterate>
+	               </with>
+			   </visibleWhen>
+         </command>
+      </menuContribution>
+	</extension>
+	
+	<extension point="org.eclipse.ui.commands">
+      <command defaultHandler="ru.surfstudio.codegenerator.plugin.Convert"
+            id="ru.surfstudio.codegenerator.plugin.convert"
+            name="Convert">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="Android Code Generator"
+            class="ru.surfstudio.codegenerator.plugin.PreferencePage"
+            id="ru.surfstudio.codegenerator.plugin.PreferencePage">
+      </page>
+   </extension>
+</plugin>

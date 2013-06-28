@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types xmlns="http://www.example.org/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/types types.xsd ">
+
+	<type name="OnClickListener" package="android.view.View">
+		<implements>
+			<method name="onClick">
+				<parameter type="View" />
+			</method>
+		</implements>
+	</type>
+	<type name="OnCheckedChangeListener" package="android.view.CompoundButton">
+		<implements>
+			<method name="onCheckedChanged">
+				<parameter type="CompoundButton" />
+				<parameter type="boolean" />
+			</method>
+		</implements>
+	</type>
+	<type name="OnSeekBarChangeListener" package="android.widget.SeekBar">
+		<implements>
+			<method name="onProgressChanged">
+				<parameter type="SeekBar" />
+				<parameter type="int" />
+				<parameter type="boolean" />
+			</method>
+			<method name="onStartTrackingTouch">
+				<parameter type="SeekBar" />
+			</method>
+			<method name="onStopTrackingTouch">
+				<parameter type="SeekBar" />
+			</method>
+		</implements>
+	</type>
+	<type name="Button" package="android.widget">
+		<require>
+			<listener type="OnClickListener" />
+		</require>
+	</type>
+	<type name="CheckBox" package="android.widget">
+		<require>
+			<listener type="OnCheckedChangeListener" />
+		</require>
+	</type>
+	<type name="Activity" package="android.app" />
+	<type name="Bundle" package="android.os" />
+	<type name="View" package="android.view" />
+	<type name="Typeface" package="android.graphics" />
+	<type name="EditText" package="android.widget" />
+	<type name="ListView" package="android.widget" />
+	<type name="RelativeLayout" package="android.widget" />
+	<type name="LinearLayout" package="android.widget" />
+	<type name="TextView" package="android.widget" />
+	<type name="ImageView" package="android.widget" />
+	<type name="ImageButton" package="android.widget">
+		<require>
+			<listener type="OnClickListener" />
+		</require>
+	</type>
+	<type name="SeekBar" package="android.widget" >
+		<require>
+			<listener type="OnSeekBarChangeListener" />
+		</require>
+	</type>
+	<type name="List" package="java.util"/>
+	<type name="Context" package="android.content"/>
+	<type name="LayoutInflater" package="android.view"/>
+	<type name="ViewGroup" package="android.view"/>
+	<type name="ArrayAdapter" package="android.widget"/>
+	
+</types>

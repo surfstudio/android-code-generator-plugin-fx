@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Android Code Generator
+Bundle-SymbolicName: ru.surfstudio.codegenerator.plugin;singleton:=true
+Bundle-Version: 0.2
+Bundle-Activator: ru.surfstudio.codegenerator.plugin.Activator
+Bundle-Vendor: SurfStudio
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.expressions
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-LazyStart: true
+Import-Package: 
+ org.eclipse.core.internal.resources,
+ org.eclipse.core.resources
+Export-Package: ru.surfstudio.codegenerator.data,
+ ru.surfstudio.codegenerator.dialog,
+ ru.surfstudio.codegenerator.logic,
+ ru.surfstudio.codegenerator.plugin,
+ ru.surfstudio.codegenerator.serialization
+Bundle-ClassPath: .,
+ jaxb-api-2.0.jar,
+ jsr173_api-1.0.jar,
+ activation-1.1.jar,
+ servlet-api-2.5.jar,
+ org.osgi.foundation-1.2.0.jar

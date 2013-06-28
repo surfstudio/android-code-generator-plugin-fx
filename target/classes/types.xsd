@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	targetNamespace="http://www.example.org/types" xmlns:tns="http://www.example.org/types" elementFormDefault="qualified">
+
+	<xs:complexType name="method">
+		<xs:sequence>
+			<xs:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="type" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" use="required" />
+		<xs:attribute name="type" use="optional" />
+	</xs:complexType>
+
+	<xs:complexType name="type">
+		<xs:sequence>
+			<xs:element name="require" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="listener" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="type" use="required" />
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="implements" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="method" type="tns:method" maxOccurs="unbounded" />
+					</xs:sequence>
+				</xs:complexType>
+<!--				<xs:key name="MethodKey">-->
+<!--					-->
+<!--				</xs:key>-->
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" use="required" />
+		<xs:attribute name="package" use="optional" />
+	</xs:complexType>
+
+	<xs:element name="types">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="type" type="tns:type" maxOccurs="unbounded">
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
