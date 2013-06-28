@@ -38,51 +38,26 @@ Original activity layout file
     &lt;ListView
         android:id="@+id/news_list_activity_news_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#eeeeee"
-        android:cacheColorHint="@android:color/transparent"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        android:drawingCacheQuality="low"
-        android:persistentDrawingCache="scrolling"
-        android:listSelector="@android:color/transparent"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp" /&rt;
+        android:layout_height="match_parent" /&rt;
 
     &lt;ImageView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/abs_shadow" /&rt;
+        android:layout_height="wrap_content" /&rt;
 
     &lt;RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignBottom="@id/news_list_activity_news_list"
-        android:layout_alignTop="@id/news_list_activity_news_list" &rt;
 
         &lt;ProgressBar
             android:id="@+id/articles_progress"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:visibility="gone" /&rt;
+            android:layout_height="wrap_content" /&rt;
 
         &lt;TextView
             android:id="@+id/articles_exist_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:drawableTop="@drawable/no_news"
-            android:padding="15dp"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="@string/mock_text"
-            android:textColor="#8a8a8a"
-            android:textSize="15dp"
-            android:visibility="gone" /&rt;
+             /&rt;
 
 	&lt;Button
             android:id="@+id/articles_exist_button"
@@ -109,31 +84,20 @@ Original item layout file
 
     &lt;TextView
         android:id="@+id/row_news_date_header_text"
-        style="@style/sectionHeader"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="10.5dp"
-        android:textColor="#3875b5"
-        android:textSize="15dp" /&rt;
+         /&rt;
 
     &lt;RelativeLayout
         android:id="@+id/news_main_layout"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/news_item_state"
-        android:paddingTop="3.5dp" &rt;
+        android:layout_height="wrap_content" &rt;
 
         &lt;FrameLayout
             android:id="@+id/row_news_image_container"
             android:layout_width="96dp"
             android:layout_height="68dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginBottom="5.5dp"
-            android:layout_marginLeft="5.5dp"
-            android:background="@drawable/shadow_news_item_image" &rt;
+             &rt;
 
             &lt;ImageView
                 android:id="@+id/row_news_icon"
@@ -146,62 +110,25 @@ Original item layout file
             android:id="@+id/row_news_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/row_news_image_container"
-            android:layout_marginLeft="6.5dp"
-            android:layout_marginTop="0dp"
-            android:layout_toRightOf="@id/row_news_image_container"
-            android:ellipsize="end"
-            android:lineSpacingMultiplier="0.85"
-            android:maxLines="2"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:textColor="#242424"
-            android:textSize="16dp" /&rt;
+            /&rt;
 
         &lt;TextView
             android:id="@+id/row_news_type_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/row_news_title_text"
-            android:layout_below="@id/row_news_title_text"
-            android:layout_marginTop="-1.5dp"
-            android:maxLines="1"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="123"
-            android:textColor="#8a8a8a"
-            android:textSize="13dp" /&rt;
+            /&rt;
 
         &lt;ImageView
             android:id="@+id/row_news_date_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/row_news_title_text"
-            android:layout_below="@id/row_news_type_text"
-            android:layout_marginTop="-0.5dp"
-            android:src="@drawable/icon_clock" /&rt;
+            /&rt;
 
         &lt;TextView
             android:id="@+id/row_news_date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/row_news_date_icon"
-            android:layout_marginLeft="4.5dp"
-            android:layout_marginTop="-3dp"
-            android:layout_toRightOf="@id/row_news_date_icon"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:shadowColor="#ffffff"
-            android:shadowDx="0"
-            android:shadowDy="2"
-            android:shadowRadius="1"
-            android:text="2 часа назад"
-            android:textColor="#8a8a8a"
-            android:textSize="13dp" /&rt;
+            /&rt;
     &lt;/RelativeLayout&rt;
 
     &lt;View
