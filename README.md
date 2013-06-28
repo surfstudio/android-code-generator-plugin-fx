@@ -17,7 +17,7 @@ List of new features:
 How to use it
 =============
 1. Select xml files with activity layout.
-2. Right click -> Android Code Generator.
+2. Right click -&rt; Android Code Generator.
 3. Wait few seconds.
 4. Use files from %packagename%.activity and %packagename%.adapter
 
@@ -29,13 +29,13 @@ Original activity layout file
 
 <pre>
 <code class="xml">
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+&lt;?xml version="1.0" encoding="utf-8"?&rt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" &rt;
 
-    <ListView
+    &lt;ListView
         android:id="@+id/news_list_activity_news_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,28 +47,28 @@ Original activity layout file
         android:persistentDrawingCache="scrolling"
         android:listSelector="@android:color/transparent"
         android:paddingLeft="0dp"
-        android:paddingRight="0dp" />
+        android:paddingRight="0dp" /&rt;
 
-    <ImageView
+    &lt;ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@drawable/abs_shadow" />
+        android:background="@drawable/abs_shadow" /&rt;
 
-    <RelativeLayout
+    &lt;RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignBottom="@id/news_list_activity_news_list"
-        android:layout_alignTop="@id/news_list_activity_news_list" >
+        android:layout_alignTop="@id/news_list_activity_news_list" &rt;
 
-        <ProgressBar
+        &lt;ProgressBar
             android:id="@+id/articles_progress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:visibility="gone" />
+            android:visibility="gone" /&rt;
 
-        <TextView
+        &lt;TextView
             android:id="@+id/articles_exist_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,15 +82,15 @@ Original activity layout file
             android:text="@string/mock_text"
             android:textColor="#8a8a8a"
             android:textSize="15dp"
-            android:visibility="gone" />
+            android:visibility="gone" /&rt;
 
-	<Button
+	&lt;Button
             android:id="@+id/articles_exist_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </RelativeLayout>
+            android:layout_height="wrap_content"/&rt;
+    &lt;/RelativeLayout&rt;
 
-</RelativeLayout> 
+&lt;/RelativeLayout&rt; 
 </code>
 </pre>
 
@@ -99,15 +99,15 @@ Original item layout file
 
 <pre>
 <code class="xml">
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+&lt;?xml version="1.0" encoding="utf-8"?&rt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp" >
+    android:paddingRight="15dp" &rt;
 
-    <TextView
+    &lt;TextView
         android:id="@+id/row_news_date_header_text"
         style="@style/sectionHeader"
         android:layout_width="fill_parent"
@@ -116,16 +116,16 @@ Original item layout file
         android:layout_marginTop="20dp"
         android:paddingLeft="10.5dp"
         android:textColor="#3875b5"
-        android:textSize="15dp" />
+        android:textSize="15dp" /&rt;
 
-    <RelativeLayout
+    &lt;RelativeLayout
         android:id="@+id/news_main_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/news_item_state"
-        android:paddingTop="3.5dp" >
+        android:paddingTop="3.5dp" &rt;
 
-        <FrameLayout
+        &lt;FrameLayout
             android:id="@+id/row_news_image_container"
             android:layout_width="96dp"
             android:layout_height="68dp"
@@ -133,16 +133,16 @@ Original item layout file
             android:layout_alignParentTop="true"
             android:layout_marginBottom="5.5dp"
             android:layout_marginLeft="5.5dp"
-            android:background="@drawable/shadow_news_item_image" >
+            android:background="@drawable/shadow_news_item_image" &rt;
 
-            <ImageView
+            &lt;ImageView
                 android:id="@+id/row_news_icon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY" />
-        </FrameLayout>
+                android:scaleType="fitXY" /&rt;
+        &lt;/FrameLayout&rt;
 
-        <TextView
+        &lt;TextView
             android:id="@+id/row_news_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -158,9 +158,9 @@ Original item layout file
             android:shadowDy="2"
             android:shadowRadius="1"
             android:textColor="#242424"
-            android:textSize="16dp" />
+            android:textSize="16dp" /&rt;
 
-        <TextView
+        &lt;TextView
             android:id="@+id/row_news_type_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -174,18 +174,18 @@ Original item layout file
             android:shadowRadius="1"
             android:text="123"
             android:textColor="#8a8a8a"
-            android:textSize="13dp" />
+            android:textSize="13dp" /&rt;
 
-        <ImageView
+        &lt;ImageView
             android:id="@+id/row_news_date_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/row_news_title_text"
             android:layout_below="@id/row_news_type_text"
             android:layout_marginTop="-0.5dp"
-            android:src="@drawable/icon_clock" />
+            android:src="@drawable/icon_clock" /&rt;
 
-        <TextView
+        &lt;TextView
             android:id="@+id/row_news_date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -201,16 +201,16 @@ Original item layout file
             android:shadowRadius="1"
             android:text="2 часа назад"
             android:textColor="#8a8a8a"
-            android:textSize="13dp" />
-    </RelativeLayout>
+            android:textSize="13dp" /&rt;
+    &lt;/RelativeLayout&rt;
 
-    <View
+    &lt;View
         android:id="@+id/row_news_items_divider"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="@drawable/divider_gray_horizontal" />
+        android:background="@drawable/divider_gray_horizontal" /&rt;
 
-</LinearLayout>
+&lt;/LinearLayout&rt;
 </code>
 </pre>
 
@@ -298,14 +298,14 @@ import android.widget.RelativeLayout;
 import android.view.View.OnClickListener;
 import android.view.View;
 
-public class NewsListActivityAdapter extends ArrayAdapter<String>{
+public class NewsListActivityAdapter extends ArrayAdapter&lt;String&rt;{
 	private static final String TAG = NewsListActivityAdapter.class.getSimpleName();
 
 	private Context context;
 	private LayoutInflater inflater;
 
 
-	public NewsListActivityAdapter(Context context, List<String> objects) {
+	public NewsListActivityAdapter(Context context, List&lt;String&rt; objects) {
 		super(context, R.layout.news_list_item, objects);
 		inflater = LayoutInflater.from(context);
 		this.context = context;
