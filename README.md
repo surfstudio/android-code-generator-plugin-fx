@@ -17,7 +17,7 @@ List of new features:
 How to use it
 =============
 1. Select xml files with activity layout.
-2. Right click -&rt; Android Code Generator.
+2. Right click -> Android Code Generator.
 3. Wait few seconds.
 4. Use files from %packagename%.activity and %packagename%.adapter
 
@@ -29,20 +29,20 @@ Original activity layout file
 
 <pre>
 <code class="xml">
-&lt;?xml version="1.0" encoding="utf-8"?&rt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" &rt;
+    android:orientation="vertical" &gt;
 
     &lt;ListView
         android:id="@+id/news_list_activity_news_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" /&rt;
+        android:layout_height="match_parent" /&gt;
 
     &lt;ImageView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" /&rt;
+        android:layout_height="wrap_content" /&gt;
 
     &lt;RelativeLayout
         android:layout_width="match_parent"
@@ -51,21 +51,21 @@ Original activity layout file
         &lt;ProgressBar
             android:id="@+id/articles_progress"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" /&rt;
+            android:layout_height="wrap_content" /&gt;
 
         &lt;TextView
             android:id="@+id/articles_exist_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-             /&rt;
+             /&gt;
 
 	&lt;Button
             android:id="@+id/articles_exist_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/&rt;
-    &lt;/RelativeLayout&rt;
+            android:layout_height="wrap_content"/&gt;
+    &lt;/RelativeLayout&gt;
 
-&lt;/RelativeLayout&rt; 
+&lt;/RelativeLayout&gt; 
 </code>
 </pre>
 
@@ -74,70 +74,70 @@ Original item layout file
 
 <pre>
 <code class="xml">
-&lt;?xml version="1.0" encoding="utf-8"?&rt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp" &rt;
+    android:paddingRight="15dp" &gt;
 
     &lt;TextView
         android:id="@+id/row_news_date_header_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-         /&rt;
+         /&gt;
 
     &lt;RelativeLayout
         android:id="@+id/news_main_layout"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" &rt;
+        android:layout_height="wrap_content" &gt;
 
         &lt;FrameLayout
             android:id="@+id/row_news_image_container"
             android:layout_width="96dp"
             android:layout_height="68dp"
-             &rt;
+             &gt;
 
             &lt;ImageView
                 android:id="@+id/row_news_icon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY" /&rt;
-        &lt;/FrameLayout&rt;
+                android:scaleType="fitXY" /&gt;
+        &lt;/FrameLayout&gt;
 
         &lt;TextView
             android:id="@+id/row_news_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            /&rt;
+            /&gt;
 
         &lt;TextView
             android:id="@+id/row_news_type_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            /&rt;
+            /&gt;
 
         &lt;ImageView
             android:id="@+id/row_news_date_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            /&rt;
+            /&gt;
 
         &lt;TextView
             android:id="@+id/row_news_date_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            /&rt;
-    &lt;/RelativeLayout&rt;
+            /&gt;
+    &lt;/RelativeLayout&gt;
 
     &lt;View
         android:id="@+id/row_news_items_divider"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="@drawable/divider_gray_horizontal" /&rt;
+        android:background="@drawable/divider_gray_horizontal" /&gt;
 
-&lt;/LinearLayout&rt;
+&lt;/LinearLayout&gt;
 </code>
 </pre>
 
@@ -225,14 +225,14 @@ import android.widget.RelativeLayout;
 import android.view.View.OnClickListener;
 import android.view.View;
 
-public class NewsListActivityAdapter extends ArrayAdapter&lt;String&rt;{
+public class NewsListActivityAdapter extends ArrayAdapter&lt;String&gt;{
 	private static final String TAG = NewsListActivityAdapter.class.getSimpleName();
 
 	private Context context;
 	private LayoutInflater inflater;
 
 
-	public NewsListActivityAdapter(Context context, List&lt;String&rt; objects) {
+	public NewsListActivityAdapter(Context context, List&lt;String&gt; objects) {
 		super(context, R.layout.news_list_item, objects);
 		inflater = LayoutInflater.from(context);
 		this.context = context;
