@@ -41,11 +41,11 @@ public class Convert extends AbstractHandler {
 	public Object execute(ExecutionEvent arg0) throws ExecutionException {
 		ISelection sel = HandlerUtil.getActiveMenuSelection(arg0);
 		IStructuredSelection selection = (IStructuredSelection) sel;
-		XmlLayoutParser layoutParser = new XmlLayoutParser(Activator.getDefault().getTypesAdapter());
 		try {
 			String rootPath = getRootPath(selection);
 			IProject project = ((File) selection.getFirstElement()).getProject();
 			String rootPackageName = getPackageName(rootPath);
+			XmlLayoutParser layoutParser = new XmlLayoutParser(rootPackageName);
 			java.io.File folder = new java.io.File(rootPath + "/res/layout");
 			java.io.File[] listOfFiles = folder.listFiles();
 			listOfFiles = sortFiles(listOfFiles);
@@ -55,7 +55,7 @@ public class Convert extends AbstractHandler {
 			for (Object object : objects) {
 				File file = (File) object;
 				layoutParser.setLog(iLog);
-				layoutParser.generateCode(rootPath, rootPackageName, file.getContents(), file.getName(), file.getProject(), listOfFiles);
+				layoutParser.generateCode(rootPath, file.getContents(), file.getName(), file.getProject(), listOfFiles);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

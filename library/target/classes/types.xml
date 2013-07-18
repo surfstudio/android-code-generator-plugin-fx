@@ -52,6 +52,7 @@
 	<type name="LinearLayout" package="android.widget" />
 	<type name="TextView" package="android.widget" />
 	<type name="ImageView" package="android.widget" />
+	<type name="ViewFlipper" package="android.widget" />
 	<type name="ImageButton" package="android.widget">
 		<require>
 			<listener type="OnClickListener" />

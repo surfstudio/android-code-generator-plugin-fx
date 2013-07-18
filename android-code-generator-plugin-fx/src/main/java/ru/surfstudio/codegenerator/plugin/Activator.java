@@ -1,12 +1,8 @@
 package ru.surfstudio.codegenerator.plugin;
 
-import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
-
-import ru.surfstudio.codegenerator.Generator;
-import ru.surfstudio.codegenerator.data.TypesAdapter;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -18,8 +14,6 @@ public class Activator extends AbstractUIPlugin {
 
 	// The shared instance
 	private static Activator plugin;
-
-	private TypesAdapter typesAdapter;
 
 	/**
 	 * The constructor
@@ -36,8 +30,6 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
-		Generator generator = Generator.getInstance();
-		typesAdapter = generator.getTypesAdapter();
 		plugin = this;
 	}
 
@@ -74,8 +66,5 @@ public class Activator extends AbstractUIPlugin {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
 	}
 
-	public TypesAdapter getTypesAdapter() {
-		return typesAdapter;
-	}
 
 }
